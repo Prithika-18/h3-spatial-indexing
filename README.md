@@ -6,5 +6,27 @@ This project is an interactive traffic congestion visualization system designed 
 
 The congestion levels are color-coded to provide intuitive visual representation on the map.The map is rendered using **React** , **Deck.gl** , and StaticMap components. Deck.gl is responsible for rendering the H3HexagonLayer, which visually represents the hexagonal grid and its associated congestion levels, with elevation and color variations. Users can **hover** over any hexagon on the map to view detailed information, including latitude, longitude, congestion count, and the congestion level.This project offers a detailed, interactive view of traffic congestion in Coimbatore, helping to monitor traffic density, analyze trends, and inform urban planning decisions for improved mobility.
 
+
 ## FEATURES
+
+- H3 Hexagonal grid
+- Interactive Traffic Visualization
+- Color-Coded Congestion Levels
+- Detailed Information on Hover
+- Data Parsing from CSV
+
+## GETTING STARTED
+
+## LIBRARIES AND TOOLS
+
+- React
+- Deck.gl
+- H3-js
+- MapTiler
+- React-Map-GL
+- PapaParse
+
+## DATASET 
+  
+  
 
