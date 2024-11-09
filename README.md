@@ -49,6 +49,7 @@ Step 6:Set color-coded for visulaize the congestion levels (red for high, orange
 Step 7:Use **Papa.parse** to load and parse CSV data.
 
 Step 8:Convert coordinates to H3 hexagons using **h3.latLngToCell**.
+h3.cellToBoundary: Converts an H3 hexagon identifier back into the geographic coordinates of the hexagon's boundary.
 
 
 
