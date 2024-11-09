@@ -34,25 +34,27 @@ Data is extract from the external source Kaggle and then converted to CSV format
 
 ## IMPLEMENTATION
 
-Step 1:Create a new React app: npx create-react-app traffic-congestion-visualization.
+Step 1:Create a new React app and install required libraries ( @deck.gl/react @deck.gl/geo-layers react-map-gl h3-js papaparse )
 
-Step 2:Install required libraries: npm install @deck.gl/react @deck.gl/geo-layers react-map-gl h3-js papaparse.
+Step 2:Get an API key from **MapTiler** and Save the API key in a variable **MAPTILER_API_KEY**.
 
-Step 3:Get an API key from **MapTiler**.
+Step 3:Prepare a CSV file (hexagons.csv) with traffic data (columns: latitude, longitude, congestion, count).
 
-Step 4:Prepare a CSV file (hexagons.csv) with traffic data (latitude, longitude, congestion, count).
+Step 4:Set up state and hooks to manage hexagons and tooltip data.
 
-Step 5:Set up state and hooks to manage hexagons and tooltip data.
+Step 5:Set the maps initial longitude, latitude (for Coimbatore), zoom, pitch, and bearing in **INITIAL_VIEW_STATE**.
 
-Step 6:Use **Papa.parse** to load and parse CSV data.
+Step 6:Set color-coded for visulaize the congestion levels (red for high, orange for medium, and green for low) to provide intuitive indicators on the map.
 
-Step 7:Convert coordinates to H3 hexagons using **h3.latLngToCell**.
+Step 7:Use **Papa.parse** to load and parse CSV data.
 
-Step 8:Use H3HexagonLayer from **Deck.gl** to display the hexagonal grid.
+Step 8:Convert coordinates to H3 hexagons using **h3.latLngToCell**.
+
+
+
+Step 8:Use H3HexagonLayer from **Deck.gl** to display the hexagonal grid and set the properties.
 
 Step 9:Configure the map with StaticMap and your MapTiler API key.
-
-Step 10:Set the initial view state for the map.
 
 Step 11:Implement **hover** functionality to **show tooltips** with detailed data.
 
