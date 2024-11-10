@@ -13,6 +13,7 @@ The congestion levels are color-coded to provide intuitive visual representation
 - Interactive Traffic Visualization
 - Color-Coded Congestion Levels
 - Detailed Information on Hover
+- 3D-Visualize map
 - Data Parsing from CSV
 
 ## GETTING STARTED
@@ -34,30 +35,45 @@ Data is extract from the external source Kaggle and then converted to CSV format
 
 ## IMPLEMENTATION
 
-Step 1:Create a new React app and install required libraries ( @deck.gl/react @deck.gl/geo-layers react-map-gl h3-js papaparse )
+Step 1:Set up the project with React, Deck.gl, React-Map-GL, and other required libraries (geo-layers ,react-map-gl, h3-js, papaparse ).
 
-Step 2:Get an API key from **MapTiler** and Save the API key in a variable **MAPTILER_API_KEY**.
+Step 2:Get an API key from **MapTiler** and Store the API key in a variable **MAPTILER_API_KEY**.
 
-Step 3:Prepare a CSV file (hexagons.csv) with traffic data (columns: latitude, longitude, congestion, count).
+Step 3:Set color-coded for visulaize the congestion levels (red for high, orange for medium, and green for low) to provide intuitive indicators on the map.
 
-Step 4:Set up state and hooks to manage hexagons and tooltip data.
+Step 4:Set up a functional component with state variables hexagons (traffic data) and tooltip (for hover info).
 
-Step 5:Set the maps initial longitude, latitude (for Coimbatore), zoom, pitch, and bearing in **INITIAL_VIEW_STATE**.
+Step 5:Prepare a CSV file (hexagons.csv) with traffic data (columns have: latitude, longitude, congestion, count).
 
-Step 6:Set color-coded for visulaize the congestion levels (red for high, orange for medium, and green for low) to provide intuitive indicators on the map.
+Step 6:Use **Papa.parse** in **useEffect** to load and parse (hexagons.csv) data's.
 
-Step 7:Use **Papa.parse** to load and parse CSV data.
+Step 7:Convert each row’s latitude and longitude to an H3 hexagon ID, validate coordinates, and calculate the hex cell boundaries.
 
-Step 8:Convert coordinates to H3 hexagons using **h3.latLngToCell**.
-h3.cellToBoundary: Converts an H3 hexagon identifier back into the geographic coordinates of the hexagon's boundary.
+Step 8:Remove any null or invalid rows from parsed data before setting it in state with setHexagons.
+
+Step 9:Set up the **Deck.gl** H3HexagonLayer using hexagons data, configuring fill, elevation, color, and hover events.
+
+Step 10:In the onHover event, update tooltip state with details like latitude,longitude, count, and level if a hexagon is hovered over.
+
+Step 11:Wrap DeckGL with initial view state and StaticMap using MapTiler styling URL.
+
+Step 12:To Render a tooltip box on hover, showing traffic details over the hovered hexagon.
+
+Step 13:Export the App component as the default export.
+
+
+## OUTPUT
 
 
 
-Step 8:Use H3HexagonLayer from **Deck.gl** to display the hexagonal grid and set the properties.
 
-Step 9:Configure the map with StaticMap and your MapTiler API key.
 
-Step 11:Implement **hover** functionality to **show tooltips** with detailed data.
+
+
+
+
+
+
 
 
 
