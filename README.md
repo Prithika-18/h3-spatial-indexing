@@ -63,7 +63,7 @@ Step 13:Export the App component as the default export.
 
 ## OUTPUT
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/e08e80c9-b738-4667-9bba-4317e708f326">
+![image](https://github.com/user-attachments/assets/d210b26e-7a19-4c5d-adc4-bcb80a4c97bb)
 
 
 
