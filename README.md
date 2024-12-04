@@ -34,7 +34,7 @@ Data is extract from the external source Kaggle and then converted to CSV format
 
 ## IMPLEMENTATION
 
-Step 1:Set up the project with React, Deck.gl, React-Map-GL, and other required libraries (geo-layers ,react-map-gl, h3-js, papaparse ).
+Step 1:Set up the project with React, Deck.gl,H3-Spatial indexing and other required libraries (geo-layers ,react-map-gl, h3-js, papaparse ).
 
 Step 2:Get an API key from **MapTiler** and Store the API key in a variable **MAPTILER_API_KEY**.
 
